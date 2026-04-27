@@ -1,0 +1,92 @@
+@import '@servicenow/sass-kit/host';
+
+$black-color: rgba(22, 27, 28, 1);
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.attachments {
+    &-container {
+        padding: calc(1.5rem)
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            margin-right: auto;
+        }
+    }
+}
+.sn-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sn-card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    uonf-attachment-card {
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}
+
+.attachments-header {
+    margin-bottom: 16px;
+}
+
+.attachment-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    &__card {
+        height: 48px;
+        flex-grow: 1;
+        max-width: calc(100% - 26px);
+    }
+}
+
+.sn-panel-header {
+
+    &-search {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    &-content {
+        &:first-child {
+            flex-grow: 1;
+        }
+    }
+}
+
+.search {
+    &-icon {
+        padding-left: 5px;
+    }
+
+    &-input {
+        width: 100%;
+    }
+}
+
+.attachment-card__header {
+    width: 100%;
+}

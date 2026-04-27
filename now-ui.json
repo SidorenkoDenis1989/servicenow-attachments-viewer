@@ -1,0 +1,39 @@
+{
+  "components": {
+    "uonf-attachments-with-video": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "Video-enabled attachments",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "Video-enabled attachments component for Workspace sidebar",
+        "category": "primitives"
+      },
+      "registration": {
+        "alias": "Video-enabled attachments",
+        "label": "Video-enabled attachments",
+        "description": "Video-enabled attachments component for Workspace sidebar",
+        "category": "media"
+      },
+      "properties": [
+        {
+          "name": "table",
+          "label": "Table",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "sys_id",
+          "label": "Sys Id",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  },
+  "scopeName": "x_uonf_uonf_atta_1"
+}
+
