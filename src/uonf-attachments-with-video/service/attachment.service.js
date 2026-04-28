@@ -6,6 +6,7 @@ export const ATTACHMENT_TYPES = {
     video: 'video',
     image: 'image',
     text:  'text',
+    audio: 'audio'
 };
 
 // ─── Queries & Mutations ────────────────────────────────────────────────────
@@ -97,9 +98,11 @@ class AttachmentsService {
         };
     }
 
-    isVideo(att)  { return att?.content_type?.includes(ATTACHMENT_TYPES.video); }
-    isImage(att)  { return att?.content_type?.includes(ATTACHMENT_TYPES.image); }
-    isText(att)   { return att?.content_type?.includes(ATTACHMENT_TYPES.text);  }
+    isVideo(att)       { return att?.content_type?.includes(ATTACHMENT_TYPES.video); }
+    isImage(att)       { return att?.content_type?.includes(ATTACHMENT_TYPES.image); }
+    isText(att)        { return att?.content_type?.includes(ATTACHMENT_TYPES.text);  }
+    isAudio(att)       { return att?.content_type?.includes(ATTACHMENT_TYPES.audio); }
+    isPreviewable(att) { return this.isText(att) || this.isImage(att) || this.isVideo(att) || this.isAudio(att); }
 
     download(attachment) {
         window.location.href = attachment.download_link;
