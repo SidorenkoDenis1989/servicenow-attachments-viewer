@@ -1,9 +1,9 @@
-import attachmentsService from '../../service/attachment.service';
-import authService from '../../service/auth.service';
-import { debounce } from '../../utils/utils';
-import { VideoPlayer } from '../video-player';
-import { AudioPlayer } from '../audio-player';
-import { ACTION_NAMES, COMPONENT_BOOTSTRAPPED } from './constants';
+import attachmentsService from '../service/attachment.service';
+import authService from '../service/auth.service';
+import { debounce } from '../utils/utils';
+import { VideoPlayer } from '../components/video-player';
+import { AudioPlayer } from '../components/audio-player';
+import { ACTION_NAMES, COMPONENT_BOOTSTRAPPED } from '../constants/attachment-constants';
 
 export const actionHandlers = {
 	[COMPONENT_BOOTSTRAPPED]: ({ updateState, state }) => {

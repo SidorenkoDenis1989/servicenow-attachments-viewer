@@ -8,10 +8,10 @@ import '@servicenow/now-modal';
 import styles from '../../styles.scss';
 import attachmentsService from '../../service/attachment.service';
 import { bytesToLabel } from '../../utils/utils';
-import { actionHandlers } from './handlers';
+import { actionHandlers } from '../../handlers/attachment-handlers';
 import { buildIdentifier } from './identifier';
 import { buildDropdownActions } from './dropdown-actions';
-import { ACTION_NAMES } from './constants';
+import { ACTION_NAMES } from '../../constants/attachment-constants';
 
 createCustomElement('uonf-attachment-card', {
 	initialState: {
